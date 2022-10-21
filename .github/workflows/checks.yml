@@ -20,7 +20,7 @@ jobs:
           python -m pip install --upgrade pip
 
       - name: "Telegram Notification"
-        users: "appleboy/telegram-action@master"
+        uses: "appleboy/telegram-action@master"
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
