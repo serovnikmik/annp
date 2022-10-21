@@ -2,4 +2,4 @@
 .vscode/
 
 #Ignore uncomplished file with number of uncomplised test
-uncomplished_test.txt
+uncomplished_tests.txt
