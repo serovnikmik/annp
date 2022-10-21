@@ -16,12 +16,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
 
-      - name: "Version patch"
-        run: npm version 0.1.$GITHUB_RUN_ID
+      # - name: "Version patch"
+      #   run: npm version 0.1.$GITHUB_RUN_ID
 
       - name: "Telegram Notification"
         uses: "appleboy/telegram-action@master"
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: New 0.1.${{ github.run_id }} version publish
+          args: New version publish
+          # args: New 0.1.${{ github.run_id }} version publish
