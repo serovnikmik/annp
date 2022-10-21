@@ -15,7 +15,6 @@ jobs:
       - name: "Install deps"
         run: |
           python -m pip install --upgrade pip
-          npm install
 
       - name: "Version patch"
         run: npm version 0.1.$GITHUB_RUN_ID
