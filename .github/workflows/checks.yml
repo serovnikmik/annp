@@ -29,9 +29,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: все ок
           # args: New 0.1.${{ github.run_id }} version publish
-          
-      - name: Run program
-        run : python -c 'write_uncomplished()'
+
+      # - name: Run program
+      #   run : python -c 'write_uncomplished()'
 
       # - name: Read file with numbers of unc test
       #   id: read_file
