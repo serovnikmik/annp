@@ -44,26 +44,26 @@ class Tests():
         else: print('WA')
         print(time.time() - st)
 
-    #changed some numbers, so there are some mistakes
-    def write_uncomplished(self):
-        #changed first number to mistake (95 -> 96)
-        if not self.check_test(self.start_test('test1.txt'), (95, -344, 52, 11331274492116074496000)):
-            with open("uncomplished_tests.txt", "w") as f:
-                f.write('\n')
-                f.write('1')
-        #change first number for mistake (59 -> 60)
-        if not self.check_test(self.start_test('test3.txt'), (59, -43, 57, -649472)):
-            with open("uncomplished_tests.txt", "w") as f:
-                f.write('\n')
-                f.write('2')
-        if not self.check_test(self.start_test('test3.txt'), (59, -43, 57, -649472)):
-            with open("uncomplished_tests.txt", "w") as f:
-                f.write('\n')
-                f.write('3')
-        if not self.check_test(self.start_test('test4.txt'), (14, 1, 92, 6706022400)):
-            with open("uncomplished_tests.txt", "w") as f:
-                f.write('\n')
-                f.write('4')
+    # #changed some numbers, so there are some mistakes
+    # def write_uncomplished(self):
+    #     #changed first number to mistake (95 -> 96)
+    #     if not self.check_test(self.start_test('test1.txt'), (95, -344, 52, 11331274492116074496000)):
+    #         with open("uncomplished_tests.txt", "w") as f:
+    #             f.write('\n')
+    #             f.write('1')
+    #     #change first number for mistake (59 -> 60)
+    #     if not self.check_test(self.start_test('test3.txt'), (59, -43, 57, -649472)):
+    #         with open("uncomplished_tests.txt", "w") as f:
+    #             f.write('\n')
+    #             f.write('2')
+    #     if not self.check_test(self.start_test('test3.txt'), (59, -43, 57, -649472)):
+    #         with open("uncomplished_tests.txt", "w") as f:
+    #             f.write('\n')
+    #             f.write('3')
+    #     if not self.check_test(self.start_test('test4.txt'), (14, 1, 92, 6706022400)):
+    #         with open("uncomplished_tests.txt", "w") as f:
+    #             f.write('\n')
+    #             f.write('4')
 
 def parse(path_to_f):
 
@@ -97,7 +97,7 @@ def main():
 
     tests = Tests()
     tests.run_tests()
-    tests.write_uncomplished()
+    # tests.write_uncomplished()
 
     '''
     print('Введите путь к файлу:')
