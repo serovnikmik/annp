@@ -47,7 +47,7 @@ class Tests():
     #changed some numbers, so there are some mistakes
     def write_uncomplished(self):
         #changed first number to mistake (95 -> 96)
-        if not self.check_test(self.start_test('test1.txt'), (96, -344, 52, 11331274492116074496000)):
+        if not self.check_test(self.start_test('test1.txt'), (95, -344, 52, 11331274492116074496000)):
             with open("uncomplished_tests.txt", "w") as f:
                 f.write('\n')
                 f.write('1')

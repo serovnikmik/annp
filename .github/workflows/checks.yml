@@ -29,6 +29,3 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: все ок
           # args: New 0.1.${{ github.run_id }} version publish
-
-      - name: "Test run"
-        run: python run main.py
