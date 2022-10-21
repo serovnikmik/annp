@@ -12,8 +12,8 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: "Edit config"
-      run: git config --global user.email "test@tes.test" && git config --global user.name "test"
+      # - name: "Edit config"
+      # run: git config --global user.email "test@tes.test" && git config --global user.name "test"
 
       - name: "Install deps"
         run: |
@@ -27,5 +27,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          # args: все ок
-          args: New 0.1.${{ github.run_id }} version publish
+          args: все ок
+          # args: New 0.1.${{ github.run_id }} version publish
