@@ -29,3 +29,12 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: все ок
           # args: New 0.1.${{ github.run_id }} version publish
+
+      - name: Read file with numbers of unc test
+        id: read_file
+        uses: andstor/file-reader-action@v1
+        with:
+          path: "uncomplished_test.txt"
+
+      - name: File content
+        run: echo "${ steps.read_file.outputs.contents }"
