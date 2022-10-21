@@ -11,6 +11,17 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+
+      - name: "Version patch"
+        run: npm version 0.1.$GITHUB_RUN_ID
+
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
+
+      - name: "Telegram Notification"
+        users: "appleboy/telegram-action@master"
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: New 0.1.${{ github.run_id }} version publish
